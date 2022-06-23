@@ -1,0 +1,110 @@
+body {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    background-color:rgb(184, 242, 146) ;
+}
+
+
+/** HEADER **/
+
+#header-nav {
+    text-align: top;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0;
+    border: 0;
+}
+
+#header-nav button {
+    margin-top: 10px;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: white;
+}
+
+.navbar-collapse {
+    border-top: 0;
+}
+
+.navbar-brand, .navbar-nav li a {
+    line-height: 75px;
+    height: 75px;
+    padding-top: 1px;
+}
+
+.navbar-brand h1 {
+    color: rgb(143, 59, 59);
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bolder;
+    font-size: 1.8em;
+    
+}
+
+.navbar-brand a:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+#nav-list {
+    
+    background-color: rgb(116, 165, 42);
+}
+
+#nav-list a {
+    /*text-align: center;*/
+    font-weight: bolder;
+    color: #fff ofofo;
+    font-size: 1.2em;
+}
+
+#nav-list a:hover {
+    color: red;
+    background-color: pink;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+    border: 30px solid black;
+   padding-bottom: 50px;
+    
+}
+
+
+/** END HEADER */
+
+
+/** HOME PAGE **/
+
+#main-content {
+    width: 92%;
+    margin-bottom: 30px;
+}
+
+#main-content h2 {
+    text-align: center;
+    font-size: 2.9em;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#main-content h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+#chicken-tile, #beef-tile, #sushi-tile {
+    margin-left:11%;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(46, 108, 9);
+    margin-bottom: 60px;
+    box-shadow: 0 0 80px rgb(15, 6, 6);
+}
+
+
+/** END HOME PAGE **/
