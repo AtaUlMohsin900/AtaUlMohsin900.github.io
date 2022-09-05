@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListCheckOff">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    footer {
+      border-top: solid 1px gray;
+      font-size: 0.8em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="row">
+      <div class="col-md-12">
+        <h1>Shopping List Check Off</h1>
+        <p>Module-2-Assignment</p>
+      </div>
+    </header>
+
+    <!-- *** Row with lists *********************************************** -->
+    <div class="row">
+      <div class="col-md-6">
+        <div ng-controller="ToBuyShoppingController as listToBuy">
+          <h2>To Buy</h2>
+          <ol>
+            <div ng-show="listToBuy.items.length > 0">
+              <li ng-repeat="item in listToBuy.items;">
+                {{ item.quantity }} of {{ item.name }} 
+                <button class="btn btn-primary btn-xs" ng-click="listToBuy.checkOff($index);">Bought</button>
+              </li>
+            </div>
+            <div ng-show="listToBuy.items.length == 0">
+              <p>All items bought!</p>
+            </div>
+          </ol>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div ng-controller="AlreadyBoughtShoppingController as listBought">
+          <h2>Already Bought</h2>
+          <div ng-show="listBought.items.length > 0">
+            <ol>
+              <li ng-repeat="item in listBought.items;">{{ item.quantity }} of {{ item.name }}</li>
+            </ol>
+          </div>
+          <div ng-show="listBought.items.length == 0">
+            <p>Nothing bought yet!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 300px;"></div>
+
+    <footer class="row">
+      <div class="col-md-12">
+        
+      </div>
+    </footer>
+  </div>
+  <!--<script src="bower_components/angular/angular.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
