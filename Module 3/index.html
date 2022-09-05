@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NarrowItDownApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 3</title>
+  <!--<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">-->
+  <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous">
+  <style>
+    footer {
+      border-top: solid 1px gray;
+      font-size: 0.8em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="row">
+      <div class="col-md-12">
+        <h1>Narrow It Down</h1>
+        <p>Module 3 Assignment</p>
+      </div>
+    </header>
+
+    <!-- *** Row with lists *********************************************** -->
+    <div class="row"  ng-controller="NarrowItDownController as search">
+      <div class="col-md-4">
+        <div>
+          <h2>Search menu</h2>
+          <p>
+            <input type="text" id="searchFor" ng-model="search.searchFor" class="form-control" placeholder="Enter item to search for" />
+          </p>
+          <p>
+            <button ng-click="search.search()" class="btn btn-primary pull-right">Click this button to search!</button>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <!--<h2>Found menu items</h2>
+          <ul class="striped">
+            <li ng-repeat="item in search.found">
+              <button class="btn btn-danger pull-right" 
+                      ng-click="search.dontWant($index);">Don't want this one!</button>
+              <b>{{ item.name }} [{{ item.short_name }}]</b><br />
+                Content: {{ item.description }}
+            </li>
+          </ul>
+          <p>{{ search.searchResult }}</p>-->
+        <found-items 
+          title="Items found" 
+          list="search.found" 
+          result="{{ search.searchResult }}" 
+          dont-want="search.dontWant(index)"></found-items>
+      </div>
+    </div>
+
+    <div style="margin-top: 300px;">
+      
+    </div>
+
+    <footer class="row">
+      <div class="col-md-12">
+        
+      </div>
+    </footer>
+  </div>
+  <!-- LOCAL framework script files -->
+  <!--<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>-->
+  <!-- EXTERNAL framework script files (CDN's) -->
+  <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>-->
+  <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <!-- LOCAL script file(s) with application logic -->
+  <script src="app.js"></script>
+  <script>
+    $(function() { $("input").focus(); })
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<h2>{{ title }}</h2>
+<ul class="striped">
+  <li ng-repeat="item in list">
+    <!-- First version of button doesn't work', but second does... Single/double quote problem??? -->
+    <!--<button class="btn btn-danger pull-right" 
+            ng-click="dontWant({ index: $index });">Don't want this one!</button>-->
+    <button class='btn btn-danger pull-right' 
+            ng-click='dontWant({ index: $index });'>Don't want this one!</button>
+    <b>{{ item.name }} [{{ item.short_name }}]</b><br />
+      Content: {{ item.description }}
+  </li>
+</ul>
+<p>{{ result }}</p>
