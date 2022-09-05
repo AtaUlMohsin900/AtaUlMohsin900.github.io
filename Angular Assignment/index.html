@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LunchCheck">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 1</title>
+  <style>
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      font-family: Verdana, Helvetica, sans-serif;
+    }
+    input.ok { border-color: black; }
+    input.ok { border-color: green; }
+    input.notOk { border-color: red; }
+    output.ok { color: green; border-color: green; }
+    output.notOk { color: red; border-color: red; }
+  </style>
+</head>
+<body>
+  <div class="container" ng-controller="LunchCheckController">
+    <div class="row">
+      <div class="col-md-12">
+        <h1> Assignment Module 1</h1>
+        <p>
+          <label ng-for="foodString">Enter food items: </label>
+          <input type="text" ng-model="itemString" ng-class="{ok: resultOk, notOk: resultOk == false}">
+          <button ng-click="checkItems();">Check if too much</button>
+        </p>
+        <p>
+          <output ng-class="{ok: resultOk, notOk: !resultOk}">{{resultString}}</output>
+        </p>
+        
+      </div>
+    </div>
+    <footer class="row">
+      <div class="col-md-12">
+        
+      </div>
+    </footer>
+  </div>
+  <!--<script src="bower_components/angular/angular.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
