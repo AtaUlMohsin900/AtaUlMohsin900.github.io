@@ -1,0 +1,21 @@
+<div class="col-md-4">
+    <h2>Menu categories</h2>
+    <p>Our products are uniquely packaged for your satisfation, Click category below to show menu items in category.</p>
+  
+    <!--<ul>
+      <li ng-repeat="cat in ctrl.categories" style="list-style: none;">
+        <button ui-sref="categories.items({ categoryShortName: cat.short_name })" class="btn btn-primary btn-xs">
+        {{ cat.name }} [ {{ cat.short_name }} ]
+        </button>
+      </li>
+    </ul>-->
+  
+    <categories items="ctrl.categories"></categories>
+  
+    <button ui-sref="home" class="btn btn-success">Return to homepage of restaurant for more options</button>
+  </div>
+  
+  <div class="col-md-8">
+    <h2>Menu items</h2>
+    <ui-view></ui-view>
+  </div>

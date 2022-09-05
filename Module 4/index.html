@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 4 assignment</title>
+  <!--<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">-->
+  <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous">
+  <style>
+    footer {
+      border-top: solid 1px gray;
+      font-size: 0.8em;
+      text-align: center;
+    }
+    body {
+      background: #efd2e7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="row">
+      <div class="col-md-12">
+        <h1>Menu App</h1>
+        <p>Module 4 assignment</p>
+      </div>
+    </header>
+
+    <!-- *** START: Row with content *********************************************** -->
+    <div class="row">
+      <!-- View should contain the columns -->
+      <ui-view></ui-view>
+    </div>
+    <!-- *** END: Row with content *********************************************** -->
+
+    <div class="row" style="margin-top: 300px;">
+      <div class="col-md-12">
+        
+      </div>
+    </div>
+
+    <footer class="row">
+      <div class="col-md-12">
+       
+      </div>
+    </footer>
+  </div>
+  <!-- LOCAL framework script files -->
+  <!--<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>-->
+
+  <!-- EXTERNAL framework script files (CDN's) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+  <!-- LOCAL script file(s) with application logic -->
+
+  <!-- Load bootstrapping module and routes -->
+  <script src="js/home/menuapp.module.js"></script>
+  <script src="js/routes.js"></script>
+
+  <!-- Load other modules -->
+  <script src="js/data/data.module.js"></script>
+  <script src="js/data/menudata.service.js"></script>
+
+  <!-- Load rest of files -->
+  <script src="js/categories/categories-list.controller.js"></script>
+  <script src="js/categories/items-list.controller.js"></script>
+  
+  <!-- Load components -->
+  <script src="js/components/categories.component.js"></script>
+  <script src="js/components/items.component.js"></script>
+</body>
+</html>
